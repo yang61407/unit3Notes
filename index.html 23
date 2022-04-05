@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="parent">
+    <input type="text id=text1"/>
+    < id="button1">BUTTON</button>
+</div>
+<script>
+  console.log('Hello console! - line 13');
+
+  const inputElement = document.getElementById('text1');
+  const inputElement = document.getElementById('button1');
+
+  inputElement.addEventListener('input'), function(e){
+      console.log(`The value you entered is ${e.target.value}`);
+  });
+  inputElement.addEventListener('input'), function(e){
+      console.log(`The value you just typed is ${e.target.value}`);
+  });
+</script>
+
+
+</body>
+</html>
