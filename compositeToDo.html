@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <input type="text">
+            <button id="submit">Enter</button>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    Description
+                </th>
+                <th>
+
+                </th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+</body>
+   <p>-------------------------------------</p>
+<table>
+    <thead>
+    <tr>
+        <th>
+            Description
+        </th>
+        <th>
+
+        </th>
+     </tr>
+    </thead>
+    <tbody id="complete">
+
+    </tbody>
+  </table>
+ </div>
+</div>
+</body>
+<script>
+    const item = document.querySelector('input');
+    const submitButton = document.getElementById('incomplete');
+    const incomplete = document.getElmentsById('incomplete');
+    const complete = document.getElementById('complete');
+
+    submitButton.addEventListener('click' function () {
+        let toDoItem = item.value;
+        addItemToIncompleteTable(todoItem);
+        item.value = "";
+    })
+
+    function addItemToIncompleteTable(toDoItem) {
+        let newRow = document.creatrElement =('tr');
+        let descriptionTag = document.createElement('td');
+        descriptionTag.textcontent = toDoItem;
+        newRow.appendChild(descriptionTag);
+        let actionTag = document.createElement('td');
+        let action = document.createElement('button');
+        action.textContent = "Mark Complete";
+        action.addEventListener('click', function(){
+            newRow.remove();
+            addItemToCompleteTable(toDoItem);
+        })
+        actionTag.appendChild(action);
+        newRow.appendChild(actionTag);
+        incomplete.appendChild(newRow);
+    }
+
+    function addItemToIncompleteTable(toDoItem) {
+        let newRow = document.creatrElement =('tr');
+        let descriptionTag = document.createElement('td');
+        descriptionTag.textcontent = toDoItem;
+        newRow.appendChild(descriptionTag);
+        let actionTag = document.createElement('td');
+        let action = document.createElement('button');
+        action.textContent = "Mark Complete";
+        action.addEventListener('click', function(){
+            newRow.remove();
+            addItemToCompleteTable(toDoItem);
+        })
+        actionTag.appendChild(action);
+        newRow.appendChild(actionTag);
+        complete.appendChild(newRow);;
+    }
+ slide 22
+</script>
+</html>
