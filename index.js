@@ -1,12 +1,21 @@
-const cardList = document.querySelector( '.cardList');
+const cardList = document.querySelector('.cardList');
 
-addCard( vaule: 'test');
-
+buildBoard();
 function addCard(value){
-    let card = document.createElements( 'div');
+    let card = document.createElement('div');
     card.classList.add('card');
     card.classList.add('active');
     card.innerHTML = value;
-    card.appendChild(card);
+    console.log(card)
+    cardList.appendChild(card);
+    console.log(cardList);
+
+    function buildBoard(){
+        for (let i=0; i<12; i++){
+            addCard('starter');
+        }
+    }
+
+
 
 }
